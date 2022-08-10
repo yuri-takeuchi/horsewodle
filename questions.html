@@ -1,0 +1,214 @@
+{% include 'base_head.html' %}
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>QUESTIONS</title>
+    </head>
+    <body>
+    {% include 'header.html' %}
+
+        <div class="questions_outer">
+            <table>
+                <tr>
+                    <td {% if request.session.color_list.0 == "green" %} back="green" {% elif request.session.color_list.0 == "yellow" %} back="yellow" {% elif request.session.color_list.0 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.0 }}</td>
+                    <td {% if request.session.color_list.1 == "green" %} back="green" {% elif request.session.color_list.1 == "yellow" %} back="yellow" {% elif request.session.color_list.1 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.1 }}</td>
+                    <td {% if request.session.color_list.2 == "green" %} back="green" {% elif request.session.color_list.2 == "yellow" %} back="yellow" {% elif request.session.color_list.2 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.2 }}</td>
+                    <td {% if request.session.color_list.3 == "green" %} back="green" {% elif request.session.color_list.3 == "yellow" %} back="yellow" {% elif request.session.color_list.3 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.3 }}</td>
+                    <td {% if request.session.color_list.4 == "green" %} back="green" {% elif request.session.color_list.4 == "yellow" %} back="yellow" {% elif request.session.color_list.4 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.4 }}</td>
+                    <td {% if request.session.color_list.5 == "green" %} back="green" {% elif request.session.color_list.5 == "yellow" %} back="yellow" {% elif request.session.color_list.5 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.5 }}</td>
+                    <td {% if request.session.color_list.6 == "green" %} back="green" {% elif request.session.color_list.6 == "yellow" %} back="yellow" {% elif request.session.color_list.6 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.6 }}</td>
+                    <td {% if request.session.color_list.7 == "green" %} back="green" {% elif request.session.color_list.7 == "yellow" %} back="yellow" {% elif request.session.color_list.7 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.7 }}</td>
+                    <td {% if request.session.color_list.8 == "green" %} back="green" {% elif request.session.color_list.8 == "yellow" %} back="yellow" {% elif request.session.color_list.8 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.8 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.9 == "green" %} back="green" {% elif request.session.color_list.9 == "yellow" %} back="yellow" {% elif request.session.color_list.9 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.9 }}</td>
+                    <td {% if request.session.color_list.10 == "green" %} back="green" {% elif request.session.color_list.10 == "yellow" %} back="yellow" {% elif request.session.color_list.10 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.10 }}</td>
+                    <td {% if request.session.color_list.11 == "green" %} back="green" {% elif request.session.color_list.11 == "yellow" %} back="yellow" {% elif request.session.color_list.11 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.11 }}</td>
+                    <td {% if request.session.color_list.12 == "green" %} back="green" {% elif request.session.color_list.12 == "yellow" %} back="yellow" {% elif request.session.color_list.12 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.12 }}</td>
+                    <td {% if request.session.color_list.13 == "green" %} back="green" {% elif request.session.color_list.13 == "yellow" %} back="yellow" {% elif request.session.color_list.13 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.13 }}</td>
+                    <td {% if request.session.color_list.14 == "green" %} back="green" {% elif request.session.color_list.14 == "yellow" %} back="yellow" {% elif request.session.color_list.14 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.14 }}</td>
+                    <td {% if request.session.color_list.15 == "green" %} back="green" {% elif request.session.color_list.15 == "yellow" %} back="yellow" {% elif request.session.color_list.15 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.15 }}</td>
+                    <td {% if request.session.color_list.16 == "green" %} back="green" {% elif request.session.color_list.16 == "yellow" %} back="yellow" {% elif request.session.color_list.16 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.16 }}</td>
+                    <td {% if request.session.color_list.17 == "green" %} back="green" {% elif request.session.color_list.17 == "yellow" %} back="yellow" {% elif request.session.color_list.17 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.17 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.18 == "green" %} back="green" {% elif request.session.color_list.18 == "yellow" %} back="yellow" {% elif request.session.color_list.18 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.18 }}</td>
+                    <td {% if request.session.color_list.19 == "green" %} back="green" {% elif request.session.color_list.19 == "yellow" %} back="yellow" {% elif request.session.color_list.19 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.19 }}</td>
+                    <td {% if request.session.color_list.20 == "green" %} back="green" {% elif request.session.color_list.20 == "yellow" %} back="yellow" {% elif request.session.color_list.20 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.20 }}</td>
+                    <td {% if request.session.color_list.21 == "green" %} back="green" {% elif request.session.color_list.21 == "yellow" %} back="yellow" {% elif request.session.color_list.21 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.21 }}</td>
+                    <td {% if request.session.color_list.22 == "green" %} back="green" {% elif request.session.color_list.22 == "yellow" %} back="yellow" {% elif request.session.color_list.22 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.22 }}</td>
+                    <td {% if request.session.color_list.23 == "green" %} back="green" {% elif request.session.color_list.23 == "yellow" %} back="yellow" {% elif request.session.color_list.23 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.23 }}</td>
+                    <td {% if request.session.color_list.24 == "green" %} back="green" {% elif request.session.color_list.24 == "yellow" %} back="yellow" {% elif request.session.color_list.24 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.24 }}</td>
+                    <td {% if request.session.color_list.25 == "green" %} back="green" {% elif request.session.color_list.25 == "yellow" %} back="yellow" {% elif request.session.color_list.25 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.25 }}</td>
+                    <td {% if request.session.color_list.26 == "green" %} back="green" {% elif request.session.color_list.26 == "yellow" %} back="yellow" {% elif request.session.color_list.26 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.26 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.27 == "green" %} back="green" {% elif request.session.color_list.27 == "yellow" %} back="yellow" {% elif request.session.color_list.27 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.27 }}</td>
+                    <td {% if request.session.color_list.28 == "green" %} back="green" {% elif request.session.color_list.28 == "yellow" %} back="yellow" {% elif request.session.color_list.28 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.28 }}</td>
+                    <td {% if request.session.color_list.29 == "green" %} back="green" {% elif request.session.color_list.29 == "yellow" %} back="yellow" {% elif request.session.color_list.29 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.29 }}</td>
+                    <td {% if request.session.color_list.30 == "green" %} back="green" {% elif request.session.color_list.30 == "yellow" %} back="yellow" {% elif request.session.color_list.30 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.30 }}</td>
+                    <td {% if request.session.color_list.31 == "green" %} back="green" {% elif request.session.color_list.31 == "yellow" %} back="yellow" {% elif request.session.color_list.31 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.31 }}</td>
+                    <td {% if request.session.color_list.32 == "green" %} back="green" {% elif request.session.color_list.32 == "yellow" %} back="yellow" {% elif request.session.color_list.32 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.32 }}</td>
+                    <td {% if request.session.color_list.33 == "green" %} back="green" {% elif request.session.color_list.33 == "yellow" %} back="yellow" {% elif request.session.color_list.33 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.33 }}</td>
+                    <td {% if request.session.color_list.34 == "green" %} back="green" {% elif request.session.color_list.34 == "yellow" %} back="yellow" {% elif request.session.color_list.34 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.34 }}</td>
+                    <td {% if request.session.color_list.35 == "green" %} back="green" {% elif request.session.color_list.35 == "yellow" %} back="yellow" {% elif request.session.color_list.35 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.35 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.36 == "green" %} back="green" {% elif request.session.color_list.36 == "yellow" %} back="yellow" {% elif request.session.color_list.36 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.36 }}</td>
+                    <td {% if request.session.color_list.37 == "green" %} back="green" {% elif request.session.color_list.37 == "yellow" %} back="yellow" {% elif request.session.color_list.37 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.37 }}</td>
+                    <td {% if request.session.color_list.38 == "green" %} back="green" {% elif request.session.color_list.38 == "yellow" %} back="yellow" {% elif request.session.color_list.38 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.38 }}</td>
+                    <td {% if request.session.color_list.39 == "green" %} back="green" {% elif request.session.color_list.39 == "yellow" %} back="yellow" {% elif request.session.color_list.39 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.39 }}</td>
+                    <td {% if request.session.color_list.40 == "green" %} back="green" {% elif request.session.color_list.40 == "yellow" %} back="yellow" {% elif request.session.color_list.40 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.40 }}</td>
+                    <td {% if request.session.color_list.41 == "green" %} back="green" {% elif request.session.color_list.41 == "yellow" %} back="yellow" {% elif request.session.color_list.41 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.41 }}</td>
+                    <td {% if request.session.color_list.42 == "green" %} back="green" {% elif request.session.color_list.42 == "yellow" %} back="yellow" {% elif request.session.color_list.42 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.42 }}</td>
+                    <td {% if request.session.color_list.43 == "green" %} back="green" {% elif request.session.color_list.43 == "yellow" %} back="yellow" {% elif request.session.color_list.43 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.43 }}</td>
+                    <td {% if request.session.color_list.44 == "green" %} back="green" {% elif request.session.color_list.44 == "yellow" %} back="yellow" {% elif request.session.color_list.44 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.44 }}</td>
+                </tr>
+            </table>
+
+            <table>
+                <tr>
+                    <td {% if request.session.color_list.45 == "green" %} back="green" {% elif request.session.color_list.45 == "yellow" %} back="yellow" {% elif request.session.color_list.45 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.45 }}</td>
+                    <td {% if request.session.color_list.46 == "green" %} back="green" {% elif request.session.color_list.46 == "yellow" %} back="yellow" {% elif request.session.color_list.46 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.46 }}</td>
+                    <td {% if request.session.color_list.47 == "green" %} back="green" {% elif request.session.color_list.47 == "yellow" %} back="yellow" {% elif request.session.color_list.47 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.47 }}</td>
+                    <td {% if request.session.color_list.48 == "green" %} back="green" {% elif request.session.color_list.48 == "yellow" %} back="yellow" {% elif request.session.color_list.48 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.48 }}</td>
+                    <td {% if request.session.color_list.49 == "green" %} back="green" {% elif request.session.color_list.49 == "yellow" %} back="yellow" {% elif request.session.color_list.49 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.49 }}</td>
+                    <td {% if request.session.color_list.50 == "green" %} back="green" {% elif request.session.color_list.50 == "yellow" %} back="yellow" {% elif request.session.color_list.50 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.50 }}</td>
+                    <td {% if request.session.color_list.51 == "green" %} back="green" {% elif request.session.color_list.51 == "yellow" %} back="yellow" {% elif request.session.color_list.51 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.51 }}</td>
+                    <td {% if request.session.color_list.52 == "green" %} back="green" {% elif request.session.color_list.52 == "yellow" %} back="yellow" {% elif request.session.color_list.52 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.52 }}</td>
+                    <td {% if request.session.color_list.53 == "green" %} back="green" {% elif request.session.color_list.53 == "yellow" %} back="yellow" {% elif request.session.color_list.53 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.53 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.54 == "green" %} back="green" {% elif request.session.color_list.54 == "yellow" %} back="yellow" {% elif request.session.color_list.54 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.54 }}</td>
+                    <td {% if request.session.color_list.55 == "green" %} back="green" {% elif request.session.color_list.55 == "yellow" %} back="yellow" {% elif request.session.color_list.55 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.55 }}</td>
+                    <td {% if request.session.color_list.56 == "green" %} back="green" {% elif request.session.color_list.56 == "yellow" %} back="yellow" {% elif request.session.color_list.56 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.56 }}</td>
+                    <td {% if request.session.color_list.57 == "green" %} back="green" {% elif request.session.color_list.57 == "yellow" %} back="yellow" {% elif request.session.color_list.57 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.57 }}</td>
+                    <td {% if request.session.color_list.58 == "green" %} back="green" {% elif request.session.color_list.58 == "yellow" %} back="yellow" {% elif request.session.color_list.58 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.58 }}</td>
+                    <td {% if request.session.color_list.59 == "green" %} back="green" {% elif request.session.color_list.59 == "yellow" %} back="yellow" {% elif request.session.color_list.59 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.59 }}</td>
+                    <td {% if request.session.color_list.60 == "green" %} back="green" {% elif request.session.color_list.60 == "yellow" %} back="yellow" {% elif request.session.color_list.60 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.60 }}</td>
+                    <td {% if request.session.color_list.61 == "green" %} back="green" {% elif request.session.color_list.61 == "yellow" %} back="yellow" {% elif request.session.color_list.61 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.61 }}</td>
+                    <td {% if request.session.color_list.62 == "green" %} back="green" {% elif request.session.color_list.62 == "yellow" %} back="yellow" {% elif request.session.color_list.62 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.62 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.63 == "green" %} back="green" {% elif request.session.color_list.63 == "yellow" %} back="yellow" {% elif request.session.color_list.63 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.63 }}</td>
+                    <td {% if request.session.color_list.64 == "green" %} back="green" {% elif request.session.color_list.64 == "yellow" %} back="yellow" {% elif request.session.color_list.64 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.64 }}</td>
+                    <td {% if request.session.color_list.65 == "green" %} back="green" {% elif request.session.color_list.65 == "yellow" %} back="yellow" {% elif request.session.color_list.65 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.65 }}</td>
+                    <td {% if request.session.color_list.66 == "green" %} back="green" {% elif request.session.color_list.66 == "yellow" %} back="yellow" {% elif request.session.color_list.66 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.66 }}</td>
+                    <td {% if request.session.color_list.67 == "green" %} back="green" {% elif request.session.color_list.67 == "yellow" %} back="yellow" {% elif request.session.color_list.67 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.67 }}</td>
+                    <td {% if request.session.color_list.68 == "green" %} back="green" {% elif request.session.color_list.68 == "yellow" %} back="yellow" {% elif request.session.color_list.68 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.68 }}</td>
+                    <td {% if request.session.color_list.69 == "green" %} back="green" {% elif request.session.color_list.69 == "yellow" %} back="yellow" {% elif request.session.color_list.69 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.69 }}</td>
+                    <td {% if request.session.color_list.70 == "green" %} back="green" {% elif request.session.color_list.70 == "yellow" %} back="yellow" {% elif request.session.color_list.70 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.70 }}</td>
+                    <td {% if request.session.color_list.71 == "green" %} back="green" {% elif request.session.color_list.71 == "yellow" %} back="yellow" {% elif request.session.color_list.71 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.71 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.72 == "green" %} back="green" {% elif request.session.color_list.72 == "yellow" %} back="yellow" {% elif request.session.color_list.72 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.72 }}</td>
+                    <td {% if request.session.color_list.73 == "green" %} back="green" {% elif request.session.color_list.73 == "yellow" %} back="yellow" {% elif request.session.color_list.73 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.73 }}</td>
+                    <td {% if request.session.color_list.74 == "green" %} back="green" {% elif request.session.color_list.74 == "yellow" %} back="yellow" {% elif request.session.color_list.74 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.74 }}</td>
+                    <td {% if request.session.color_list.75 == "green" %} back="green" {% elif request.session.color_list.75 == "yellow" %} back="yellow" {% elif request.session.color_list.75 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.75 }}</td>
+                    <td {% if request.session.color_list.76 == "green" %} back="green" {% elif request.session.color_list.76 == "yellow" %} back="yellow" {% elif request.session.color_list.76 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.76 }}</td>
+                    <td {% if request.session.color_list.77 == "green" %} back="green" {% elif request.session.color_list.77 == "yellow" %} back="yellow" {% elif request.session.color_list.77 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.77 }}</td>
+                    <td {% if request.session.color_list.78 == "green" %} back="green" {% elif request.session.color_list.78 == "yellow" %} back="yellow" {% elif request.session.color_list.78 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.78 }}</td>
+                    <td {% if request.session.color_list.79 == "green" %} back="green" {% elif request.session.color_list.79 == "yellow" %} back="yellow" {% elif request.session.color_list.79 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.79 }}</td>
+                    <td {% if request.session.color_list.80 == "green" %} back="green" {% elif request.session.color_list.80 == "yellow" %} back="yellow" {% elif request.session.color_list.80 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.80 }}</td>
+                </tr>
+                <tr>
+                    <td {% if request.session.color_list.81 == "green" %} back="green" {% elif request.session.color_list.81 == "yellow" %} back="yellow" {% elif request.session.color_list.81 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.81 }}</td>
+                    <td {% if request.session.color_list.82 == "green" %} back="green" {% elif request.session.color_list.82 == "yellow" %} back="yellow" {% elif request.session.color_list.82 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.82 }}</td>
+                    <td {% if request.session.color_list.83 == "green" %} back="green" {% elif request.session.color_list.83 == "yellow" %} back="yellow" {% elif request.session.color_list.83 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.83 }}</td>
+                    <td {% if request.session.color_list.84 == "green" %} back="green" {% elif request.session.color_list.84 == "yellow" %} back="yellow" {% elif request.session.color_list.84 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.84 }}</td>
+                    <td {% if request.session.color_list.85 == "green" %} back="green" {% elif request.session.color_list.85 == "yellow" %} back="yellow" {% elif request.session.color_list.85 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.85 }}</td>
+                    <td {% if request.session.color_list.86 == "green" %} back="green" {% elif request.session.color_list.86 == "yellow" %} back="yellow" {% elif request.session.color_list.86 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.86 }}</td>
+                    <td {% if request.session.color_list.87 == "green" %} back="green" {% elif request.session.color_list.87 == "yellow" %} back="yellow" {% elif request.session.color_list.87 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.87 }}</td>
+                    <td {% if request.session.color_list.88 == "green" %} back="green" {% elif request.session.color_list.88 == "yellow" %} back="yellow" {% elif request.session.color_list.88 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.88 }}</td>
+                    <td {% if request.session.color_list.89 == "green" %} back="green" {% elif request.session.color_list.89 == "yellow" %} back="yellow" {% elif request.session.color_list.89 == "gray" %} back="gray" {% endif %}>{{ request.session.input_mojilist.89 }}</td>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="questions_outer">
+            <div class="questions_inner">
+                {% for moji1 in moji_list1 %}
+                    <form method="post" style="display: inline">
+                        {% csrf_token %}
+                        <button {% if moji1.moji in request.session.green_list %} class="btn_green"
+                                {% elif moji1.moji in request.session.yellow_list %} class="btn_yellow"
+                                {% elif moji1.moji in request.session.gray_list %} class="btn_gray"
+                                {% else %} class="btn_normal" {% endif %}
+                                type="submit" name="button" value="{{ moji1.moji }}">{{ moji1.moji }}</button>
+                    </form>
+                    {%if moji1.separation == True %}
+                        <br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="questions_inner">
+                {% for moji2 in moji_list2 %}
+                    <form method="post" style="display: inline">
+                        {% csrf_token %}
+                        <button {% if moji2.moji in request.session.green_list %} class="btn_green"
+                                {% elif moji2.moji in request.session.yellow_list %} class="btn_yellow"
+                                {% elif moji2.moji in request.session.gray_list %} class="btn_gray"
+                                {% else %} class="btn_normal" {% endif %}
+                                type="submit" name="button" value="{{ moji2.moji }}">{{ moji2.moji }}</button>
+                    </form>
+                    {%if moji2.separation == True %}
+                        <br>
+                    {% endif %}
+                {% endfor %}
+            </div>
+
+            <div class="questions_inner">
+                {% for moji3 in moji_list3 %}
+                    <form method="post" style="display: inline">
+                        {% csrf_token %}
+                        <button {% if moji3.moji in request.session.green_list %} class="btn_green"
+                                {% elif moji3.moji in request.session.yellow_list %} class="btn_yellow"
+                                {% elif moji3.moji in request.session.gray_list %} class="btn_gray"
+                                {% else %} class="btn_normal" {% endif %}
+                                type="submit" name="button" value="{{ moji3.moji }}">{{ moji3.moji }}</button>
+                    </form>
+                    {%if moji3.separation == True %}
+                        <br>
+                    {% endif %}
+                {% endfor %}
+                <form method="post" style="display: inline">
+                    {% csrf_token %}
+                    <button class="btn_normal" type="submit" name="button" value="delete">|←</button>
+                </form>
+
+                <form method="post" style="display: inline">
+                {% csrf_token %}
+                    <button class="btn_normal" type="submit" name="button" value="line_delete">___|←</button>
+                </form>
+
+            </div>
+            <div class="questions_inner">
+                {% for moji4 in moji_list4 %}
+                    <form method="post" style="display: inline">
+                        {% csrf_token %}
+                        <button {% if moji4.moji in request.session.green_list %} class="btn_green"
+                                {% elif moji4.moji in request.session.yellow_list %} class="btn_yellow"
+                                {% elif moji4.moji in request.session.gray_list %} class="btn_gray"
+                                {% else %} class="btn_normal" {% endif %}
+                                type="submit" name="button" value="{{ moji4.moji }}">{{ moji4.moji }}</button>
+                    </form>
+                    {%if moji4.separation == True %}
+                        <br>
+                    {% endif %}
+                {% endfor %}
+                <br>
+                <form method="post" style="display: inline">
+                    {% csrf_token %}
+                    <button class="btn_enter" type="submit" name="button" value="enter">Enter</button>
+                </form>
+
+            </div>
+        </div>
+
+    {% include 'message.html' %}
+    {% include 'giveup.html' %}
+
+    </body>
+</html>

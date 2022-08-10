@@ -1,0 +1,21 @@
+{% include 'base_head.html' %}
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>馬名情報データ一覧</title>
+    </head>
+    <body>
+        {% if horsename_list %}
+            <ul>
+            {% for horsename in horsename_list %}
+                <li>{{ horsename.horse_name }}</li>
+                <li>{{ horsename.race_name }}</li>
+                <li>{{ horsename.year }}</li>
+            {% endfor %}
+            </ul>
+        {% else %}
+            <p>馬名情報データがありません。</p>
+        {% endif %}
+    </body>
+</html>

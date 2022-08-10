@@ -1,0 +1,29 @@
+{% include 'base_head.html' %}
+
+    <label class="open" for="pop-up">
+        ANSWER
+    </label>
+
+    <input type="checkbox" id="pop-up">
+
+        <div class="overlay">
+
+            <div class="caution_window">
+                <div class="answer_outer">
+
+                    <div class="answer_inner">
+                        答えを表示して出題をリセットします。よろしいですか？
+                    </div>
+
+                    <form method="post" style="display: inline">
+                    {% csrf_token %}
+                        <button type="submit" class="btn_small" name="button" value="reset_yes">YES</button>
+                    </form>
+
+                    <label for="pop-up">
+                        NO
+                    </label>
+                </div>
+            </div>
+        </div>
+    </input>

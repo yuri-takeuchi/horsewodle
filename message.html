@@ -1,0 +1,20 @@
+{% include 'base_head.html' %}
+
+{% if request.session.answer_status == "incorrect" %}
+{% if request.session.message %}
+
+    <div class="add-control">
+        <div class="action-close">
+            <input type="checkbox" class="checkbox" id="close" name="close">
+
+                <div class="message_box">
+                    <div class="message_item">
+                        {{ request.session.message }}
+                    </div>
+                    <label for="close" class="btn_small">OK</label>
+                </div>
+
+        </div>
+    </div>
+{% endif %}
+{% endif %}

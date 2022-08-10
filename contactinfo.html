@@ -1,0 +1,23 @@
+{% include 'base_head.html' %}
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>ContactInfo</title>
+    </head>
+    <body>
+        {% if contactInfo %}
+            {{ msg }}
+            <ul>
+            {% for contact in contactInfo %}
+                <li>{{ contact.user_name }}</li>
+                <li>{{ contact.user_email }}</li>
+                <li>{{ contact.comment }}</li>
+            {% endfor %}
+            </ul>
+            {{ count }}件
+        {% else %}
+            <p>お問い合わせはありません。</p>
+        {% endif %}
+    </body>
+</html>

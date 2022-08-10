@@ -1,0 +1,51 @@
+{% include 'base_head.html' %}
+
+{% if request.session.answer_status == "fail" or request.session.answer_status == "correct" %}
+
+    <div class="give-control">
+        <div class="give-close">
+            <input type="checkbox" class="give_checkbox" id="give_close" name="close">
+
+            <div class="give_window">
+                <div class="answer_outer">
+
+                    <div class="give_answer">Answer</div>
+                    <div class="give_message">{{ request.session.message }}</div>
+
+                    <table class="answer_table">
+                        <tr>
+                            {% for answer in request.session.answer_list %}
+                                <td class="answer_td">{{ answer }}</td>
+                            {% endfor %}
+                        </tr>
+                    </table>
+
+                    <div class="give_message">優勝した主なレース</div>
+
+                    <div class="answer_inner" >
+                        <div class="answerinfo_year">
+                            {% for year in request.session.answer_year %}
+                                <div>{{ year }}</div>
+                            {% endfor %}
+                        </div>
+
+                        <div class="answerinfo_race">
+                            {% for race in request.session.answer_race %}
+                                <div>{{ race }}</div>
+                            {% endfor %}
+                        </div>
+                    </div>
+
+                    <form method="post" style="display: inline">
+                    {% csrf_token %}
+                        <button type="submit" class="btn_small" name="button" value="reset">
+                            NEXT GAME
+                        </button>
+                    </form>
+
+                </div>
+            </div>
+        </div>
+    </div>
+
+{% endif %}

@@ -1,0 +1,18 @@
+{% include 'base_head.html' %}
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>送信完了</title>
+    </head>
+    <body>
+        <div class="complete_outer">
+            {{ msg }}
+            <br>
+
+            <button type="submit" class="btn_large">
+                <a href='{% url "index" %}' >HOME</a>
+            </button>
+        </div>
+    </body>
+</html>

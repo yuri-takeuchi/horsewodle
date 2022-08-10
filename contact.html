@@ -1,0 +1,41 @@
+{% include 'base_head.html' %}
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>CONTACT</title>
+    </head>
+    <body>
+
+        <div class="contact_outer">
+            <h2>CONTACT</h2>
+
+            <form action='{% url "send" %}' method="post">
+                {% csrf_token %}
+                <table class="contact_table">
+                    <tr>
+                        <td class="contact_title">名前</td>
+                        <td class="contact_item"><input type="text" placeholder="名字　名前"></td>
+                    </tr>
+                    <tr>
+                        <td class="contact_title">メール</td>
+                        <td class="contact_item"><input type="email" placeholder="sample@abc.com"></td>
+                    </tr>
+                    <tr>
+                        <td class="contact_title">お問い合わせ<br>内容</td>
+                        <td class="contact_item">
+                            <textarea class="contact_textarea" placeholder="1000文字以内でご記入ください"></textarea>
+                        </td>
+                    </tr>
+
+                </table>
+
+                <button type="submit" class="btn_large">SEND</button>
+            </form>
+
+                <button class="btn_large" >
+                    <a href='{% url "index" %}'>HOME</a>
+                </button>
+        </div>
+    </body>
+</html>

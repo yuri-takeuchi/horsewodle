@@ -1,0 +1,37 @@
+{% include 'base_head.html' %}
+{% load static %}
+
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>TOP</title>
+    </head>
+    <body>
+        {% include 'menu.html' %}
+        <div class="photo_area">
+            <img src="{% static 'images/top_main.jpeg' %}" class="top_img">
+        </div>
+
+        <div class="top_outer">
+            <div class="top_textbox">
+                <h3 class="top_textbox_title">今日は誰だろう。</h3>
+                <div class="top_textbox_sentence">
+                    今、注目しているあの馬たち。<br>
+                    昔、応援していたあの馬たち。<br>
+                    ここで「はじめまして」の馬たち。<br>
+                    <br>
+                    ワードルパズルを通して<br>
+                    たくさんのお馬さんたちと<br>
+                    出会ってみてください。<br>
+                </div>
+            </div>
+        </div>
+        <div class="top_logomark">
+            <a href="{% url 'index' %}" class="a_tdc_none">
+                <p>HORSE WORDLE</p>
+                Shall We Play Game?
+            </a>
+        </div>
+
+    </body>
+</html>
