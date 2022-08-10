@@ -1,0 +1,689 @@
+/*共通*****************************************************************************************************************/
+
+/* 背景 */
+body {
+    background: #eae8e1;
+}
+/*ボタン各種*************************************************************************************************************/
+
+/*ポップアップ画面用ボタン*/
+.btn_small {
+    appearance: none;
+    border: 0;
+    color: #fff;
+    background: #00533f;
+    padding: .3em .5em;
+    border-radius: .3em;
+    text-align: center;
+    cursor: pinter;
+	font-weight: normal;
+}
+.btn_small:hover {
+    cursor: pinter;
+    background: #e17b34;
+}
+
+/* 通常画面用ボタン*/
+.btn_large{
+    display: inline-block;
+    justify-content: space-between;
+    text-align: center;
+    margin: 2.5 auto;
+    padding-left: 0.75em;
+    padding-right: 0.75em;
+    height: 2.8em;
+    color: #00533f;
+    font-size: 16px;
+    font-weight: bold;
+    background: #eae8e1;
+    box-shadow: 0 3px 0 #d4dcd3;
+    transition: 0.2s;
+    border-radius: 0.2em;/*角の丸み*/
+}
+
+.btn_large:after {
+    content: '';
+    width: 5px;
+    height: 5px;
+    text_decoration: none;
+    transform: rotate(45deg);
+}
+
+.btn_large:hover {
+    transform: translateY(3px);
+    text-decoration: none;
+    box-shadow: 0 2px 0 #d4dcd3;
+}
+
+.btn_large a {
+    text-decoration: none;
+    color: #00533f;
+}
+
+/*top画面*********************************************************************************************************/
+
+.top_img{
+    width: 100%;
+    height: 720px;
+    object-fit: cover;
+}
+.photo_area {
+    display: block;
+    margin: 0 auto;
+    margin-top: 0%;
+}
+
+.top_outer {
+    width: 80%;
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+.top_textbox {
+    width: 60%;
+    max-width: 500px;
+    margin-bottom: 15%;
+    display: flex;
+    align-items: left;
+    text-align: left;
+    color: #00533f;
+    flex-direction: column;
+}
+.top_textbox_title{
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 10px;
+}
+.top_textbox_sentence{
+    font-size: 14px;
+    font-weight: bolder;
+}
+.top_logomark {
+    width: 80%;
+    max-width: 100px;
+    margin: 0 20% 10% auto;
+    text_decoration: none;
+    color: #00533f;
+}
+.top_logomark a {
+    text-decoration: none;
+    text-align: left;
+    color: #00533f;
+}
+.top_logomark a:hover {
+    text_decoration: none;
+    color: #e17b34;
+
+}
+.top_logomark p {
+    font-size: 26px;
+    font-weight: bolder;
+    margin-bottom: 5px;
+}
+
+/*ナビゲーション*********************************************************************************************************/
+
+.navigate ul{
+    width: 30%;
+    margin-left: 70%;
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    border-radius: 0.2em;/*角の丸み*/
+}
+.navigate li {
+    display: inline;
+    margin: 0.9em;
+}
+.navigate li:last-child {
+	border-bottom: none;
+}
+.navigate a {
+    color: #00533f;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.navigate li a.active {
+	color: #e17b34;
+}
+.navigate li a:hover:not(.active) {
+	color: #e17b34;
+}
+
+
+/*インデックス画面********************************************************************************************************/
+
+.index_outer {
+    width: 80%;
+    max-width: 720px;
+    margin: 0 auto;
+    margin-top: 3%;
+}
+
+.square_container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.square_contents {
+    position: relative;
+    width: 25%;
+    background: #adccbc;
+    margin: 1%;
+    overflow: hidden;
+    border-radius: 0.2em;/*角の丸み*/
+}
+.square_contents:hover {
+    background: #d4dcd3;
+}
+
+.square_contents::before {
+    content: "";
+    display: block;
+    padding-top: 100%;
+}
+.square_contents p {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    padding: 3px;
+    margin: 0;
+    transform: translate(-50%, -50%);
+}
+.square_contents a {
+    color: 00533f;
+    text-decoration: none;
+    font-family: "serif";
+    font-size: 14px;
+    font-weight: bolder;
+}
+
+
+/*出題回答画面***********************************************************************************************************/
+
+.questions_outer {
+    width: 85%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 1%;
+    display: flex;
+    flex-direction: row;
+}
+.questions_inner {
+    width: 25%;
+    margin: 1%;
+}
+
+/* 入力文字列表示エリア*/
+table {
+    margin: 0 auto;
+    border-collapse: collapse;
+    background: #fff;
+    color: #00533f;
+}
+td {
+    border: solid 0.5px #00533f; /* 線の種類 太さ 色 */
+    width: 40px;
+    height: 40px;
+    align-items: center;
+    text-align: center;
+    color: #00533f;
+    font-size: 18px;
+    font-weight: bolder;
+}
+
+td[back="green"] {
+  background-color: #adccbc;
+}
+td[back="yellow"] {
+  background-color: #f8e58c;
+}
+td[back="gray"] {
+  background-color: #a9a9a9;
+}
+
+/* カタカナキーボードのボタン */
+.btn_normal{
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 2.5 auto;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  height: 2.8em;
+  color: #00533f;
+  font-size: 16px;
+  font-weight: bold;
+  background: #eae8e1;
+  box-shadow: 0 3px 0 #d4dcd3;
+  transition: 0.2s;
+  border-radius: 0.2em;/*角の丸み*/
+  text-decoration: none;
+}
+
+.btn_normal:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+
+.btn_normal:hover {
+  transform: translateY(3px);
+  text-decoration: none;
+  box-shadow: 0 2px 0 #d4dcd3;
+}
+
+.btn_enter{
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 2.5 auto;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  height: 2.8em;
+  color: #e17b34;
+  font-size: 16px;
+  font-weight: bold;
+  background: #eae8e1;
+  box-shadow: 0 3px 0 #d4dcd3;
+  transition: 0.2s;
+  border-radius: 0.2em;/*角の丸み*/
+  text-decoration: none;
+}
+
+.btn_enter:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+
+.btn_enter:hover {
+  transform: translateY(3px);
+  text-decoration: none;
+  box-shadow: 0 2px 0 #d4dcd3;
+}
+
+.btn_gray{
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 2.5 auto;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  height: 2.8em;
+  color: #00533f;
+  font-size: 16px;
+  font-weight: bold;
+  background: #a9a9a9;
+  transition: 0.2s;
+  border-radius: 0.2em;/*角の丸み*/
+  text-decoration: none;
+}
+.btn_gray:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+
+.btn_gray:hover {
+  transform: translateY(3px);
+  text-decoration: none;
+  box-shadow: 0 2px 0 #d4dcd3;
+}
+
+.btn_yellow{
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 2.5 auto;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  height: 2.8em;
+  color: #00533f;
+  font-size: 16px;
+  font-weight: bold;
+  background: #f8e58c;
+  transition: 0.2s;
+  border-radius: 0.2em;/*角の丸み*/
+  text-decoration: none;
+}
+.btn_yellow:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+
+.btn_yellow:hover {
+  transform: translateY(3px);
+  text-decoration: none;
+  box-shadow: 0 2px 0 #d4dcd3;
+}
+
+.btn_green{
+  display: inline-block;
+  justify-content: space-between;
+  text-align: center;
+  align-items: center;
+  margin: 2.5 auto;
+  padding-left: 0.75em;
+  padding-right: 0.75em;
+  height: 2.8em;
+  color: #00533f;
+  font-size: 16px;
+  font-weight: bold;
+  background: #adccbc;
+  transition: 0.2s;
+  border-radius: 0.2em;/*角の丸み*/
+  text-decoration: none;
+}
+.btn_green:after {
+  content: '';
+  width: 5px;
+  height: 5px;
+  transform: rotate(45deg);
+}
+
+.btn_green:hover {
+  transform: translateY(3px);
+  text-decoration: none;
+  box-shadow: 0 2px 0 #d4dcd3;
+}
+
+
+/*正答表示ポップアップ画面*************************************************************************************************/
+
+.open {
+	cursor:pointer; /* マウスオーバーでカーソルの形状を変えることで、クリックできる要素だとわかりやすいように */
+}
+#pop-up {
+	display: none; /* label でコントロールするので input は非表示に */
+}
+.overlay {
+	display: none; /* input にチェックが入るまでは非表示に */
+}
+
+#pop-up:checked + .overlay {
+	display: block;
+	z-index: 9999;
+	background-color: #00000070;
+	position: fixed;
+	width: 100%;
+	height: 100vh;
+	top: 0;
+	left: 0;
+}
+.window {
+	width: 560px;
+	height: 560px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	display: flex;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.caution_window {
+	width: 400px;
+	height: 200px;
+	background-color: #d4dcd3;
+	color: #00533f;
+	font-weight: bolder;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+.text {
+	font-size: 18px;
+}
+.close {
+	cursor:pointer;
+	position: absolute;
+	top: 4px;
+	right: 10px;
+	font-size: 20px;
+}
+
+.answer_outer {
+    width: 72%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+}
+.answer_table {
+    width: 100%;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    text-align: center;
+}
+.answer_td {
+    width: 10%;
+}
+
+.answer_inner {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+    margin-bottom: 10%;
+    display: flex;
+    flex-direction: row;
+    text-align: center;
+    align-items: center;
+}
+.answerinfo_year {
+    width: 120px;
+    margin-left: 5%
+    text-align: center;
+    color: #00533f;
+    font-size: 16px;
+    font-weight: bolder;
+}
+.answerinfo_race {
+    width: 320px;
+    text-align: center;
+    color: #00533f;
+    font-size: 16px;
+    font-weight: bolder;
+}
+
+/*ギブアップ＆正解ポップアップ画面*********************************************************************************************/
+
+.give_btn {
+	cursor:pointer;
+	position: absolute;
+	background: d4dcd3
+	top: 4px;
+	right: 10px;
+	font-size: 20px;
+}
+
+.give_window {
+	width: 560px;
+	height: 560px;
+	background-color: #ffffff;
+	border-radius: 6px;
+	display: flex;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+/* title */
+.give_answer {
+    font-size: 20px;
+    font-weight: bolder;
+    color: #00533f;
+    margin-top: 5%
+}
+.give_message {
+    font-size: 16px;
+    font-weight: bolder;
+    color: #00533f;
+    margin-top: 5%
+}
+/* close button */
+.give-close {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+
+/* checkbox non-display */
+.give_checkbox {
+    display: none;
+}
+/* close button's control */
+.give-control .give-close #give_close:checked ~ .give_btn {
+    display: none;
+}
+.give-control .give-close #give_close:checked ~ .give_window {
+    display: none;
+}
+
+
+/*メッセージ表示ポップアップ画面*********************************************************************************************/
+
+.message_box {
+	width: 400px;
+	height: 200px;
+	background-color: #d4dcd3;
+	color: #00533f;
+	font-weight: bolder;
+	border-radius: 6px;
+	display: flex;
+	flex-direction: column;
+	position: fixed;
+	top: 50%;
+	left: 50%;
+	transform: translate(-50%, -50%);
+}
+
+/* close button */
+.action-close {
+    width: 100%;
+    margin: 0 auto;
+    margin-top: 5%;
+    text-align: center;
+    align-items: center;
+    position: relative;
+}
+.action-close .btn_small {
+    position: absolute;
+    font-size: 16px;
+    font-weight: bolder;
+    margin-left: 45%;
+    margin-top: 35%;
+}
+
+/* checkbox non-display */
+.add-control .checkbox {
+    display: none;
+}
+
+/* close button's control */
+.add-control .action-close #close:checked ~ .btn_small {
+    display: none;
+}
+.add-control .action-close #close:checked ~ .message_box {
+    display: none;
+}
+
+.message_item {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 10%;
+    text-align: left;
+}
+
+/* お問い合わせ画面*******************************************************************************************************/
+.contact_outer {
+    width: 80%;
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.contact_table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.contact_title {
+    width: 30%;
+    background: #d4dcd3;
+    text-align: left;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.contact_item {
+    width: 70%;
+    text-align: center;
+    padding: 20px;
+    font-size: 14px;
+}
+.contact_textarea {
+    width: 320px;
+    height: 240px;
+}
+
+/* ルール画面*******************************************************************************************************/
+.rule_outer {
+    width: 75%;
+    max-width: 1080px;
+    margin: 0 auto;
+    margin-top: 3%;
+    text-align: center;
+}
+
+.rule_table {
+    width: 100%;
+    margin-bottom: 20px;
+}
+.rule_title {
+    width: 30%;
+    background: #d4dcd3;
+    text-align: center;
+    font-size: 12px;
+    font-weight: bolder;
+}
+.rule_item {
+    width: 70%;
+    text-align: left;
+    padding: 20px;
+    font-size: 14px;
+}
+
+/* 送信完了画面*******************************************************************************************************/
+
+.complete_outer {
+    width: 70%;
+    margin-top: 400px;
+    margin: 0 auto;
+    text-align: center;
+    align-items: center;
+    font-size: 16px;
+    font-weight: bolder;
+    color: #00533f;
+}
