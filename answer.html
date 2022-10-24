@@ -1,4 +1,4 @@
-{% include 'base_head.html' %}
+<link rel="stylesheet" href="css/style.css">
 
     <label class="open" for="pop-up">
         ANSWER
@@ -16,7 +16,6 @@
                     </div>
 
                     <form method="post" style="display: inline">
-                    {% csrf_token %}
                         <button type="submit" class="btn_small" name="button" value="reset_yes">YES</button>
                     </form>
 

@@ -1,0 +1,499 @@
+<!DOCTYPE html>
+<html lang="ja">
+    <head>
+        <meta charset="UTF-8">
+        <title>QUESTIONS</title>
+        <link rel="stylesheet" href="css/style.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+        <script src="js/questions.js"></script>
+    </head>
+    <script type="text/javascript">
+        $(function(){
+            get_question_data();
+            var mojilist = '';
+            var countdown = 10;
+            var status = "answering";
+            window.sessionStorage.setItem(['mojilist'], [mojilist]);
+            window.sessionStorage.setItem(['countdown'], [countdown]);
+            window.sessionStorage.setItem(['status'], [status]);
+        });
+    </script>
+
+    <body>
+        <nav class="navigate">
+            <ul>
+                <li>
+                    <a href='index.html'>BACK</a>
+                </li>
+                <li>
+                    <a href='answer.html'>ANSWER</a>
+                </li>
+            </ul>
+        </nav>
+        <div class="questions_outer">
+            <div id="horsename"></div>
+            <table>
+                <tr>
+                    <script>
+                        for(var i=0; i<9; i++){
+                            var id = 't' + String(i);
+                            document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                        }
+                    </script>
+                    </tr>
+                    <tr>
+                        <script>
+                            for(var i=9; i<18; i++){
+                                var id = 't' + String(i);
+                                document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                            }
+                        </script>
+                    </tr>
+                    <tr>
+                        <script>
+                            for(var i=18; i<27; i++){
+                                var id = 't' + String(i);
+                                document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                            }
+                        </script>
+                    </tr>
+                    <tr>
+                        <script>
+                            for(var i=27; i<36; i++){
+                                var id = 't' + String(i);
+                                document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                            }
+                        </script>
+                    </tr>
+                    <tr>
+                        <script>
+                            for(var i=36; i<45; i++){
+                                var id = 't' + String(i);
+                                document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                            }
+                        </script>
+                    </tr>
+                </table>
+
+            <table>
+                <tr>
+                    <script>
+                        for(var i=45; i<54; i++){
+                            var id = 't' + String(i);
+                            document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                        }
+                    </script>
+                </tr>
+                <tr>
+                    <script>
+                        for(var i=54; i<63; i++){
+                            var id = 't' + String(i);
+                            document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                        }
+                    </script>
+                </tr>
+                <tr>
+                    <script>
+                        for(var i=63; i<72; i++){
+                            var id = 't' + String(i);
+                            document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                        }
+                    </script>
+                </tr>
+                <tr>
+                    <script>
+                        for(var i=72; i<81; i++){
+                            var id = 't' + String(i);
+                            document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                        }
+                    </script>
+                </tr>
+                <tr>
+                    <script>
+                        for(var i=81; i<90; i++){
+                            var id = 't' + String(i);
+                            document.currentScript.insertAdjacentHTML('beforebegin', '<td id="' + id +'" back="green"></td>');
+                        }
+                    </script>
+                </tr>
+            </table>
+        </div>
+        <br>
+        <div class="questions_outer">
+            <div class="questions_inner">
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id0" value="ア" class="btn_normal">ア</button> 
+                    <script type="text/javascript">$('#m_id0').click(function(){click_moji('m_id0'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id1" value="イ" class="btn_normal">イ</button> 
+                    <script type="text/javascript">$('#m_id1').click(function(){click_moji('m_id1'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id2" value="ウ" class="btn_normal">ウ</button> 
+                    <script type="text/javascript">$('#m_id2').click(function(){click_moji('m_id2'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id3" value="エ" class="btn_normal">エ</button> 
+                    <script type="text/javascript">$('#m_id3').click(function(){click_moji('m_id3'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id4" value="オ" class="btn_normal">オ</button> 
+                    <script type="text/javascript">$('#m_id4').click(function(){click_moji('m_id4'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id5" value="カ" class="btn_normal">カ</button> 
+                    <script type="text/javascript">$('#m_id5').click(function(){click_moji('m_id5'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id6" value="キ" class="btn_normal">キ</button> 
+                    <script type="text/javascript">$('#m_id6').click(function(){click_moji('m_id6'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id7" value="ク" class="btn_normal">ク</button> 
+                    <script type="text/javascript">$('#m_id7').click(function(){click_moji('m_id7'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id8" value="ケ" class="btn_normal">ケ</button> 
+                    <script type="text/javascript">$('#m_id8').click(function(){click_moji('m_id8'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id9" value="コ" class="btn_normal">コ</button> 
+                    <script type="text/javascript">$('#m_id9').click(function(){click_moji('m_id9'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id10" value="サ" class="btn_normal">サ</button> 
+                    <script type="text/javascript">$('#m_id10').click(function(){click_moji('m_id10'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id11" value="シ" class="btn_normal">シ</button> 
+                    <script type="text/javascript">$('#m_id11').click(function(){click_moji('m_id11'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id12" value="ス" class="btn_normal">ス</button> 
+                    <script type="text/javascript">$('#m_id12').click(function(){click_moji('m_id12'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id13" value="セ" class="btn_normal">セ</button> 
+                    <script type="text/javascript">$('#m_id13').click(function(){click_moji('m_id13'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id14" value="ソ" class="btn_normal">ソ</button> 
+                    <script type="text/javascript">$('#m_id14').click(function(){click_moji('m_id14'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id15" value="タ" class="btn_normal">タ</button> 
+                    <script type="text/javascript">$('#m_id15').click(function(){click_moji('m_id15'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id16" value="チ" class="btn_normal">チ</button> 
+                    <script type="text/javascript">$('#m_id16').click(function(){click_moji('m_id16'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id17" value="ツ" class="btn_normal">ツ</button> 
+                    <script type="text/javascript">$('#m_id17').click(function(){click_moji('m_id17'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id18" value="テ" class="btn_normal">テ</button> 
+                    <script type="text/javascript">$('#m_id18').click(function(){click_moji('m_id18'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id19" value="ト" class="btn_normal">ト</button> 
+                    <script type="text/javascript">$('#m_id19').click(function(){click_moji('m_id19'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id20" value="ナ" class="btn_normal">ナ</button> 
+                    <script type="text/javascript">$('#m_id20').click(function(){click_moji('m_id20'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id21" value="ニ" class="btn_normal">ニ</button> 
+                    <script type="text/javascript">$('#m_id21').click(function(){click_moji('m_id21'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id22" value="ヌ" class="btn_normal">ヌ</button> 
+                    <script type="text/javascript">$('#m_id22').click(function(){click_moji('m_id22'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id23" value="ネ" class="btn_normal">ネ</button> 
+                    <script type="text/javascript">$('#m_id23').click(function(){click_moji('m_id23'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id24" value="ノ" class="btn_normal">ノ</button> 
+                    <script type="text/javascript">$('#m_id24').click(function(){click_moji('m_id24'); });</script>
+                </form>
+                <br>
+            </div>
+
+            <div class="questions_inner">
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id25" value="ハ" class="btn_normal">ハ</button> 
+                    <script type="text/javascript">$('#m_id25').click(function(){click_moji('m_id25'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id26" value="ヒ" class="btn_normal">ヒ</button> 
+                    <script type="text/javascript">$('#m_id26').click(function(){click_moji('m_id26'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id27" value="フ" class="btn_normal">フ</button> 
+                    <script type="text/javascript">$('#m_id27').click(function(){click_moji('m_id27'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id28" value="ヘ" class="btn_normal">ヘ</button> 
+                    <script type="text/javascript">$('#m_id28').click(function(){click_moji('m_id28'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id29" value="ホ" class="btn_normal">ホ</button> 
+                    <script type="text/javascript">$('#m_id29').click(function(){click_moji('m_id29'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id30" value="マ" class="btn_normal">マ</button> 
+                    <script type="text/javascript">$('#m_id30').click(function(){click_moji('m_id30'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id31" value="ミ" class="btn_normal">ミ</button> 
+                    <script type="text/javascript">$('#m_id31').click(function(){click_moji('m_id31'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id32" value="ム" class="btn_normal">ム</button> 
+                    <script type="text/javascript">$('#m_id32').click(function(){click_moji('m_id32'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id33" value="メ" class="btn_normal">メ</button> 
+                    <script type="text/javascript">$('#m_id33').click(function(){click_moji('m_id33'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id34" value="モ" class="btn_normal">モ</button> 
+                    <script type="text/javascript">$('#m_id34').click(function(){click_moji('m_id34'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id35" value="ヤ" class="btn_normal">ヤ</button> 
+                    <script type="text/javascript">$('#m_id35').click(function(){click_moji('m_id35'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id36" value="ユ" class="btn_normal">ユ</button> 
+                    <script type="text/javascript">$('#m_id36').click(function(){click_moji('m_id36'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id37" value="ヨ" class="btn_normal">ヨ</button> 
+                    <script type="text/javascript">$('#m_id37').click(function(){click_moji('m_id37'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id38" value="ラ" class="btn_normal">ラ</button> 
+                    <script type="text/javascript">$('#m_id38').click(function(){click_moji('m_id38'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id39" value="リ" class="btn_normal">リ</button> 
+                    <script type="text/javascript">$('#m_id39').click(function(){click_moji('m_id39'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id40" value="ル" class="btn_normal">ル</button> 
+                    <script type="text/javascript">$('#m_id40').click(function(){click_moji('m_id40'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id41" value="レ" class="btn_normal">レ</button> 
+                    <script type="text/javascript">$('#m_id41').click(function(){click_moji('m_id41'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id42" value="ロ" class="btn_normal">ロ</button> 
+                    <script type="text/javascript">$('#m_id42').click(function(){click_moji('m_id42'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id43" value="ワ" class="btn_normal">ワ</button> 
+                    <script type="text/javascript">$('#m_id43').click(function(){click_moji('m_id43'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id44" value="ヲ" class="btn_normal">ヲ</button> 
+                    <script type="text/javascript">$('#m_id44').click(function(){click_moji('m_id44'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id45" value="ン" class="btn_normal">ン</button> 
+                    <script type="text/javascript">$('#m_id45').click(function(){click_moji('m_id45'); });</script>
+                </form>
+                <br>
+            </div>
+
+            <div class="questions_inner">
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id46" value="ガ" class="btn_normal">ガ</button> 
+                    <script type="text/javascript">$('#m_id46').click(function(){click_moji('m_id46'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id47" value="ギ" class="btn_normal">ギ</button> 
+                    <script type="text/javascript">$('#m_id47').click(function(){click_moji('m_id47'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id48" value="グ" class="btn_normal">グ</button> 
+                    <script type="text/javascript">$('#m_id48').click(function(){click_moji('m_id48'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id49" value="ゲ" class="btn_normal">ゲ</button> 
+                    <script type="text/javascript">$('#m_id49').click(function(){click_moji('m_id49'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id50" value="ゴ" class="btn_normal">ゴ</button> 
+                    <script type="text/javascript">$('#m_id50').click(function(){click_moji('m_id50'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id51" value="ザ" class="btn_normal">ザ</button> 
+                    <script type="text/javascript">$('#m_id51').click(function(){click_moji('m_id51'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id52" value="ジ" class="btn_normal">ジ</button> 
+                    <script type="text/javascript">$('#m_id52').click(function(){click_moji('m_id52'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id53" value="ズ" class="btn_normal">ズ</button> 
+                    <script type="text/javascript">$('#m_id53').click(function(){click_moji('m_id53'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id54" value="ゼ" class="btn_normal">ゼ</button> 
+                    <script type="text/javascript">$('#m_id54').click(function(){click_moji('m_id54'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id55" value="ゾ" class="btn_normal">ゾ</button> 
+                    <script type="text/javascript">$('#m_id55').click(function(){click_moji('m_id55'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id56" value="ダ" class="btn_normal">ダ</button> 
+                    <script type="text/javascript">$('#m_id56').click(function(){click_moji('m_id56'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id57" value="ヂ" class="btn_normal">ヂ</button> 
+                    <script type="text/javascript">$('#m_id57').click(function(){click_moji('m_id57'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id58" value="ヅ" class="btn_normal">ヅ</button> 
+                    <script type="text/javascript">$('#m_id58').click(function(){click_moji('m_id58'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id59" value="デ" class="btn_normal">デ</button> 
+                    <script type="text/javascript">$('#m_id59').click(function(){click_moji('m_id59'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id60" value="ド" class="btn_normal">ド</button> 
+                    <script type="text/javascript">$('#m_id60').click(function(){click_moji('m_id60'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id61" value="バ" class="btn_normal">バ</button> 
+                    <script type="text/javascript">$('#m_id61').click(function(){click_moji('m_id61'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id62" value="ビ" class="btn_normal">ビ</button> 
+                    <script type="text/javascript">$('#m_id62').click(function(){click_moji('m_id62'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id63" value="ブ" class="btn_normal">ブ</button> 
+                    <script type="text/javascript">$('#m_id63').click(function(){click_moji('m_id63'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id64" value="ベ" class="btn_normal">ベ</button> 
+                    <script type="text/javascript">$('#m_id64').click(function(){click_moji('m_id64'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id65" value="ボ" class="btn_normal">ボ</button> 
+                    <script type="text/javascript">$('#m_id65').click(function(){click_moji('m_id65'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="delete" value="delete" class="btn_normal">|←</button> 
+                    <script type="text/javascript">$('#delete').click(function(){click_delete(); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="l_delete" value="l_delete" class="btn_normal">|__←</button> 
+                    <script type="text/javascript">$('#l_delete').click(function(){click_line_delete(); });</script>
+                </form>
+
+            </div>
+            <div class="questions_inner">
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id66" value="パ" class="btn_normal">パ</button> 
+                    <script type="text/javascript">$('#m_id66').click(function(){click_moji('m_id66'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id67" value="ピ" class="btn_normal">ピ</button> 
+                    <script type="text/javascript">$('#m_id67').click(function(){click_moji('m_id67'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id68" value="プ" class="btn_normal">プ</button> 
+                    <script type="text/javascript">$('#m_id68').click(function(){click_moji('m_id68'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id69" value="ペ" class="btn_normal">ペ</button> 
+                    <script type="text/javascript">$('#m_id69').click(function(){click_moji('m_id69'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id70" value="ポ" class="btn_normal">ポ</button> 
+                    <script type="text/javascript">$('#m_id70').click(function(){click_moji('m_id70'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id71" value="ァ" class="btn_normal">ァ</button> 
+                    <script type="text/javascript">$('#m_id71').click(function(){click_moji('m_id71'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id72" value="ィ" class="btn_normal">ィ</button> 
+                    <script type="text/javascript">$('#m_id72').click(function(){click_moji('m_id72'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id73" value="ゥ" class="btn_normal">ゥ</button> 
+                    <script type="text/javascript">$('#m_id73').click(function(){click_moji('m_id73'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id74" value="ェ" class="btn_normal">ェ</button> 
+                    <script type="text/javascript">$('#m_id74').click(function(){click_moji('m_id74'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id75" value="ォ" class="btn_normal">ォ</button> 
+                    <script type="text/javascript">$('#m_id75').click(function(){click_moji('m_id75'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id76" value="ャ" class="btn_normal">ャ</button> 
+                    <script type="text/javascript">$('#m_id76').click(function(){click_moji('m_id76'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id77" value="ュ" class="btn_normal">ュ</button> 
+                    <script type="text/javascript">$('#m_id77').click(function(){click_moji('m_id77'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id78" value="ョ" class="btn_normal">ョ</button> 
+                    <script type="text/javascript">$('#m_id78').click(function(){click_moji('m_id78'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id79" value="ヴ" class="btn_normal">ヴ</button> 
+                    <script type="text/javascript">$('#m_id79').click(function(){click_moji('m_id79'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id80" value="ッ" class="btn_normal">ッ</button> 
+                    <script type="text/javascript">$('#m_id80').click(function(){click_moji('m_id80'); });</script>
+                </form>
+                <form method="post" style="display: inline">
+                    <button type="button" id="m_id81" value="ー" class="btn_normal">ー</button> 
+                    <script type="text/javascript">$('#m_id81').click(function(){click_moji('m_id81'); });</script>
+                </form>
+                <br>
+                <form method="post" style="display: inline">
+                    <button type="button" id="enter" value="enter" class="btn_enter">Enter</button> 
+                    <script type="text/javascript">$('#enter').click(function(){click_enter(); });</script>
+                </form>
+
+            </div>
+        </div>
+        <script type="text/javascript">
+            //{% include 'message.html' %}
+            //{% include 'giveup.html' %}
+        </script>
+    </body>
+</html>

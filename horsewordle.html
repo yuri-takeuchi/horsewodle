@@ -1,5 +1,4 @@
-{% include 'base_head.html' %}
-{% load static %}
+<link rel="stylesheet" href="css/style.css">
 
 <html lang="ja">
     <head>
@@ -7,9 +6,16 @@
         <title>TOP</title>
     </head>
     <body>
-        {% include 'menu.html' %}
+        <nav class="navigate">
+            <ul>
+                <li><a href='horsewordle.html'>HOME</a></li>
+                <li><a href='rule.html'>RULE</a></li>
+                <li><a href='contact.html'>CONTACT</a></li>
+            </ul>
+        </nav>
+
         <div class="photo_area">
-            <img src="{% static 'images/top_main.jpeg' %}" class="top_img">
+            <img src="css/image/top_main.jpeg" class="top_img">
         </div>
 
         <div class="top_outer">
@@ -27,7 +33,7 @@
             </div>
         </div>
         <div class="top_logomark">
-            <a href="{% url 'index' %}" class="a_tdc_none">
+            <a href="index.html" class="a_tdc_none">
                 <p>HORSE WORDLE</p>
                 Shall We Play Game?
             </a>

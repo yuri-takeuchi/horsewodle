@@ -152,6 +152,24 @@ body {
 	color: #e17b34;
 }
 
+.navigate label {
+    display: inline;
+    margin: 0.9em;
+}
+.navigate label {
+    color: #00533f;
+    text-decoration: none;
+    display: block;
+    font-size: 18px;
+    font-weight: bolder;
+}
+.navigate label.active {
+	color: #e17b34;
+}
+.navigate label:hover:not(.active) {
+	color: #e17b34;
+}
+
 
 /*インデックス画面********************************************************************************************************/
 
@@ -236,7 +254,7 @@ td {
     font-weight: bolder;
 }
 
-td[back="green"] {
+/* td[back="green"] {
   background-color: #adccbc;
 }
 td[back="yellow"] {
@@ -244,7 +262,7 @@ td[back="yellow"] {
 }
 td[back="gray"] {
   background-color: #a9a9a9;
-}
+} */
 
 /* カタカナキーボードのボタン */
 .btn_normal{

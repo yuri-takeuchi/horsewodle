@@ -1,7 +1,7 @@
-{% include 'base_head.html' %}
-
-{% if request.session.answer_status == "fail" or request.session.answer_status == "correct" %}
-
+<!DOCTYPE html>
+<html lang="ja">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="css/style.css">
     <div class="give-control">
         <div class="give-close">
             <input type="checkbox" class="give_checkbox" id="give_close" name="close">
@@ -10,13 +10,15 @@
                 <div class="answer_outer">
 
                     <div class="give_answer">Answer</div>
-                    <div class="give_message">{{ request.session.message }}</div>
+                    <div class="give_message">答え合わせです。</div>
 
                     <table class="answer_table">
                         <tr>
-                            {% for answer in request.session.answer_list %}
-                                <td class="answer_td">{{ answer }}</td>
-                            {% endfor %}
+                            <script>
+                                for(var i=0; i<9; i++){
+                                    document.currentScript.insertAdjacentHTML('beforebegin', '<td class="answer_td">ア</td>');
+                                }
+                            </script>
                         </tr>
                     </table>
 
@@ -24,20 +26,15 @@
 
                     <div class="answer_inner" >
                         <div class="answerinfo_year">
-                            {% for year in request.session.answer_year %}
-                                <div>{{ year }}</div>
-                            {% endfor %}
+                            <div>2022</div>
                         </div>
 
                         <div class="answerinfo_race">
-                            {% for race in request.session.answer_race %}
-                                <div>{{ race }}</div>
-                            {% endfor %}
+                            <div>秋華賞</div>
                         </div>
                     </div>
 
                     <form method="post" style="display: inline">
-                    {% csrf_token %}
                         <button type="submit" class="btn_small" name="button" value="reset">
                             NEXT GAME
                         </button>
@@ -47,5 +44,3 @@
             </div>
         </div>
     </div>
-
-{% endif %}
