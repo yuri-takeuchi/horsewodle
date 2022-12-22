@@ -2,7 +2,7 @@ function get_question_data() {
 
     // セッション情報の初期設定
     var input_moji = 
-        "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポァィゥェォャュョヴー";
+        "アイウエオカキクケコサシスセソタチツテトナニヌネノハヒフヘホマミムメモヤユヨラリルレロワヲンガギグゲゴザジズゼゾダヂヅデドバビブベボパピプペポァィゥェォャュョヴッー";
     var mojilist = '';
     var countdown = 10;
     var status = "answering";
@@ -70,9 +70,23 @@ function click_enter() {
     // string型をObject型へ戻す（JSONデータ）
     var colors = JSON.parse(str_colors);
 
+    // 9文字未満の場合スペースで埋める。また、今回分だけを取り出す。
+    var arr_mojilist = [... mojilist];
+    while(arr_mojilist.length % 9 != 0){
+        arr_mojilist.push(" ");
+    }
+    mojilist = arr_mojilist.join("");
+    window.sessionStorage.setItem(['mojilist'], [mojilist]);
+    
+    var crr_mojilist;
+    var start = (10 - Number(countdown)) * 9;
+    crr_mojilist = arr_mojilist.slice(start, start+9);
+    crr_mojilist = crr_mojilist.join("");
+    console.log("crr_mojilist: " + crr_mojilist);
+
     // JSONデータとしてデータをセット
     var JSONdata = {
-        "mojilist": mojilist,
+        "mojilist": crr_mojilist,
         "horseName": horseName,
         "countdown": countdown,
         "status": status,
@@ -113,37 +127,47 @@ function changeMojiColor(data){
     // 入力文字列分だけ、色変更がないかチェックする
     var mojilist = window.sessionStorage.getItem(['mojilist']);
     var arr_mojilist = [...mojilist];
+    var countdown = window.sessionStorage.getItem(['countdown']);
+    var start = (10 - Number(countdown) - 1) * 9;
+    var crr_mojilist = arr_mojilist.slice(start, start+9);
     var m_id = 'm_id';
     var t_id = 't';
 
-    for(var m of arr_mojilist){
-        // tableとbtnのidを取得する
+    // tableとbtnの色変更
+    for(var t=start; t<start+8; t++){
+        // tableのidを取得する
+        t_id = t_id + String(t);
+        console.log("t: " + t);
+        console.log("t_id: " + t_id);
+
+        // tableの色を変える
+        var m = crr_mojilist[t];
+        if(colors[m] === "gray"){
+            document.getElementById(t_id).style.backgroundColor = '#a9a9a9'
+        }else if(colors[m] === "yellow"){
+            document.getElementById(t_id).style.backgroundColor = '#f8e58c'
+        }else if(colors[m] === "green"){
+            document.getElementById(t_id).style.backgroundColor = '#adccbc'
+        }
+        t_id = 't';
+
+        // btnのidを取得する
         var input_moji = [...window.sessionStorage.getItem(['input_moji'])];
         var m_num = input_moji.indexOf(m);
         m_id = m_id + String(m_num);
         console.log("m: " + m);
         console.log("m_id: " + m_id);
-
-        var t_num = arr_mojilist.indexOf(m);
-        t_id = t_id + String(t_num);
-        console.log("t_id: " + t_id);
-        console.log("colors[m]: " + colors[m]);
         
-        // tableとbtnの色を変える
+        // btnの色を変える
         if(colors[m] === "gray"){
             document.getElementById(m_id).classList.add("btn_gray");
-            document.getElementById(t_id).style.backgroundColor = '#a9a9a9'
         }else if(colors[m] === "yellow"){
             document.getElementById(m_id).classList.add("btn_yellow");
-            document.getElementById(t_id).style.backgroundColor = '#f8e58c'
         }else if(colors[m] === "green"){
             document.getElementById(m_id).classList.add("btn_green");
-            document.getElementById(t_id).style.backgroundColor = '#adccbc'
         }
         m_id = 'm_id';
-        t_id = 't';
-    }
-    
+    }    
 }
 
 function click_delete() {
